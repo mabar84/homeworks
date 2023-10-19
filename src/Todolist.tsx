@@ -38,6 +38,11 @@ export function Todolist(props: PropsType) {
         }}>
             Delete all tasks
         </button>
+        <button onClick={() => {
+            props.changeFilter('Show first three tasks')
+        }}>
+            Show first three tasks
+        </button>
 
         <div>
             <button onClick={() => {
