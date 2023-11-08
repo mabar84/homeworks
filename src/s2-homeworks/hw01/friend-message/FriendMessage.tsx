@@ -32,6 +32,7 @@ const FriendMessage = (props: FriendMessagePropsType) => {
                     <pre
                         id={'hw1-friend-text-' + props.message.id}
                         className={s.friendMessageText}
+                        
                     >
                         {/*создаёт студент*/}
                         {props.message.message.text}
