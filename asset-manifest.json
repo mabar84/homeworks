@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/mabar84.github.io/homeworks/static/css/main.9457b7c6.css",
-    "main.js": "/mabar84.github.io/homeworks/static/js/main.fe3a119c.js",
-    "static/js/787.66cb4309.chunk.js": "/mabar84.github.io/homeworks/static/js/787.66cb4309.chunk.js",
-    "static/media/avatar.png": "/mabar84.github.io/homeworks/static/media/avatar.d947cb9d0d13765666b6.png",
-    "index.html": "/mabar84.github.io/homeworks/index.html",
-    "main.9457b7c6.css.map": "/mabar84.github.io/homeworks/static/css/main.9457b7c6.css.map",
-    "main.fe3a119c.js.map": "/mabar84.github.io/homeworks/static/js/main.fe3a119c.js.map",
-    "787.66cb4309.chunk.js.map": "/mabar84.github.io/homeworks/static/js/787.66cb4309.chunk.js.map"
+    "main.css": "/homeworks/static/css/main.9457b7c6.css",
+    "main.js": "/homeworks/static/js/main.ec3d0677.js",
+    "static/js/787.66cb4309.chunk.js": "/homeworks/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar.png": "/homeworks/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/homeworks/index.html",
+    "main.9457b7c6.css.map": "/homeworks/static/css/main.9457b7c6.css.map",
+    "main.ec3d0677.js.map": "/homeworks/static/js/main.ec3d0677.js.map",
+    "787.66cb4309.chunk.js.map": "/homeworks/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9457b7c6.css",
-    "static/js/main.fe3a119c.js"
+    "static/js/main.ec3d0677.js"
   ]
 }
