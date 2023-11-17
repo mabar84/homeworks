@@ -4,10 +4,11 @@
     gap: 44px;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .textarea {
-    width: 100%;
+    max-width: 976px;
     padding: 12px 24px;
     border-radius: 20px;
     background: #F5F7FB;
@@ -16,6 +17,7 @@
     border: none;
     outline: 1px solid #F5F7FB;
     overflow-wrap: break-word;
+    flex-grow: 1;
 }
 
 .button {
