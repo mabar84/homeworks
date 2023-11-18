@@ -2,12 +2,12 @@ import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
 
 type GreetingPropsType = {
-    name: any // need to fix any
+    name: string // need to fix any
     setNameCallback: any // need to fix any
     addUser: any // need to fix any
     onBlur: any // need to fix any
     onEnter: any // need to fix any
-    error: any // need to fix any
+    error: string // need to fix any
     totalUsers: any // need to fix any
     lastUserName?: any // need to fix any
 }
@@ -29,6 +29,7 @@ const Greeting: React.FC<GreetingPropsType> = (
 
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
+
             <div className={s.text}>
                 {'Людей добавили: '}
                 <span id={'hw3-users-total'}>
@@ -42,7 +43,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                         id={'hw3-input'}
                         value={name}
                         onChange={setNameCallback}
-                        className={inputClass}
+                        className={s.inputClass}
                         onKeyDown={onEnter}
                         onBlur={onBlur}
                     />
@@ -66,6 +67,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                     Привет <span id={'hw3-last-user'}>{lastUserName}</span>!
                 </div>
             )}
+            
         </div>
     )
 }
