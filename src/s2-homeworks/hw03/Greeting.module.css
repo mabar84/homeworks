@@ -8,6 +8,11 @@
 }
 
 .error {
+    color: #C00;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .inputClass {
@@ -21,9 +26,13 @@
 }
 
 .inputClass:focus {
+    outline: 1px solid #D1D1D1;
 }
 
 .errorInput {
+    outline: 1px solid #CC0000;
+    border: 1px solid #CC0000;
+
 }
 
 .button {
@@ -45,13 +54,17 @@
 }
 
 .button:focus {
+    outline: 1px solid #06C;
+
 }
 
 .button:active {
 }
 
 .button:disabled {
-    /*cursor: unset;*/
+    opacity: 0.5;
+    background: #06C;
+    cursor: unset;
 }
 
 .text {
@@ -64,4 +77,9 @@
 }
 
 .greeting {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
