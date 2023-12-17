@@ -10,11 +10,9 @@ type PropsType = {
 }
 
 export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
-    const sidebarClass = s.sidebar
-        + (open ? ' ' + s.open : '')
-
+    const sidebarClass = s.sidebar + (open ? ' ' + s.open : '')
     const location = useLocation()
-    console.log(location.pathname)
+
     return (
         <>
             {/*затемнение справа от открытого меню*/}
