@@ -20,17 +20,3 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): UserType
             return state
     }
 }
-
-// export const checkAC = (): ActionType => {
-//     return {
-//         type: 'check',
-//         payload: 18
-//     }
-// }
-//
-// export const sortAC = (by: 'up' | 'down'): ActionType => {
-//     return {
-//         type: 'sort',
-//         payload: by
-//     }
-// }
