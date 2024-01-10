@@ -2,7 +2,16 @@
 }
 
 .wrapper {
+    width: 229px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .number {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
 }
