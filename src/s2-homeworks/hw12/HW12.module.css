@@ -19,5 +19,16 @@ html {
 }
 
 .select {
+    width: 171px;
+    height: 36px;
+    padding: 8px 10px;
 
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    border-radius: 2px;
+    border: 1px solid;
 }
+
