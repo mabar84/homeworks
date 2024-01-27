@@ -15,12 +15,14 @@ import errorUnknown from './images/error.svg'
 * */
 
 const HW13 = () => {
+    const [isFetching, setIsFetching] = useState(false)
     const [code, setCode] = useState('')
     const [text, setText] = useState('')
     const [info, setInfo] = useState('')
     const [image, setImage] = useState('')
 
     const send = (x?: boolean | null) => () => {
+        setIsFetching(true)
         const url =
             x === null
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
@@ -30,18 +32,40 @@ const HW13 = () => {
         setImage('')
         setText('')
         setInfo('...loading')
-
         axios
             .post(url, {success: x})
             .then((res) => {
-                setCode('Код 200!')
                 setImage(success200)
-                // дописать
-
+                setCode('Код 200!')
+                setText(res.data.errorText)
+                setInfo(res.data.info)
             })
             .catch((e) => {
-                // дописать
-
+                switch (e.response.status) {
+                    case 400: {
+                        setImage(error400)
+                        setCode('Ошибка 400!')
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
+                        break
+                    }
+                    case 500: {
+                        setImage(error500)
+                        setCode('Ошибка 500!')
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
+                        break
+                    }
+                    default: {
+                        setImage(errorUnknown)
+                        setCode('Error!')
+                        setText(e.message)
+                        setInfo(e.name)
+                    }
+                }
+            })
+            .finally(() => {
+                setIsFetching(false)
             })
     }
 
@@ -55,8 +79,7 @@ const HW13 = () => {
                         id={'hw13-send-true'}
                         onClick={send(true)}
                         xType={'secondary'}
-                        // дописать
-
+                        disabled={isFetching}
                     >
                         Send true
                     </SuperButton>
@@ -64,8 +87,7 @@ const HW13 = () => {
                         id={'hw13-send-false'}
                         onClick={send(false)}
                         xType={'secondary'}
-                        // дописать
-
+                        disabled={isFetching}
                     >
                         Send false
                     </SuperButton>
@@ -73,8 +95,7 @@ const HW13 = () => {
                         id={'hw13-send-undefined'}
                         onClick={send(undefined)}
                         xType={'secondary'}
-                        // дописать
-
+                        disabled={isFetching}
                     >
                         Send undefined
                     </SuperButton>
@@ -82,8 +103,7 @@ const HW13 = () => {
                         id={'hw13-send-null'}
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
-                        // дописать
-
+                        disabled={isFetching}
                     >
                         Send null
                     </SuperButton>
