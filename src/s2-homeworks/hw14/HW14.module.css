@@ -3,5 +3,10 @@
 }
 
 .loading {
-
+    max-width: 486px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    color: #4D4D4D;
+    text-align: right;
 }
