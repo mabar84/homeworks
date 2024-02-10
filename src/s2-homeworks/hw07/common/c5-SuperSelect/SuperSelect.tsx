@@ -42,7 +42,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
 
 
     return (<>
-            <p className={s.text}>Выберите тему</p>
+            <p className={s.text}>&nbsp;</p>
             <select
                 className={finalSelectClassName}
                 onChange={onChangeCallback}

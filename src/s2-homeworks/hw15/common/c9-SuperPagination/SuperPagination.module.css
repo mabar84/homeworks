@@ -2,6 +2,25 @@
     display: flex;
 }
 
+.pagination li button {
+    color: #0D0B0C;
+}
+
+.pagination li button:hover {
+    border-radius: 2px;
+}
+
+.pagination li button[aria-current] {
+    background: #0066CC;
+    border-radius: 2px;
+    color: #ffffff;
+}
+
+.pagination li button[aria-current]:hover {
+    background: #0066CC;
+
+}
+
 .text1 {
 
 }
