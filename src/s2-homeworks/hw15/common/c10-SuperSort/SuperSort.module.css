@@ -1,0 +1,8 @@
+.arrows {
+    width: 8px;
+    height: 12px;
+    cursor: pointer;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
