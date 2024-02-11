@@ -87,7 +87,34 @@ const HW15 = () => {
         setCount(+params.count || 4)
     }, [])
 
-    const mappedTechs = techs.map(t => (
+    console.log(sort)
+    let sortedTechs = techs
+    console.log(sortedTechs)
+    if (sort === 'up') {
+        sortedTechs = [...techs].sort((a, b) => {
+            if (a.tech > b.tech) {
+                return -1;
+            }
+            if (a.tech < b.tech) {
+                return 1;
+            }
+            return 0;
+        });
+    }
+    if (sort === 'down') {
+        sortedTechs = [...techs].sort((a, b) => {
+            if (a.tech < b.tech) {
+                return -1;
+            }
+            if (a.tech > b.tech) {
+                return 1;
+            }
+            return 0;
+        });
+    }
+
+
+    const mappedTechs = sortedTechs.map(t => (
         <div key={t.id} className={s.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
                 {t.tech}
