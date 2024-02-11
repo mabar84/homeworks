@@ -71,6 +71,7 @@ const HW15 = () => {
 
     const onChangeSort = (newSort: string) => {
         // делает студент
+        console.log(newSort)
         setSort(newSort)
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
@@ -87,10 +88,8 @@ const HW15 = () => {
         setCount(+params.count || 4)
     }, [])
 
-    console.log(sort)
     let sortedTechs = techs
-    console.log(sortedTechs)
-    if (sort === 'up') {
+    if (sort === '0tech') {
         sortedTechs = [...techs].sort((a, b) => {
             if (a.tech > b.tech) {
                 return -1;
@@ -101,7 +100,7 @@ const HW15 = () => {
             return 0;
         });
     }
-    if (sort === 'down') {
+    if (sort === '1tech') {
         sortedTechs = [...techs].sort((a, b) => {
             if (a.tech < b.tech) {
                 return -1;
