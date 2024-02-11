@@ -1,6 +1,7 @@
 .pagination {
     display: flex;
     margin-bottom: 36px;
+    flex-wrap: wrap;
 }
 
 .pagination li button {
