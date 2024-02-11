@@ -17,10 +17,6 @@
     align-items: center;
 }
 
-.developerHeader img {
-    cursor: auto;
-}
-
 .row {
     padding: 12px 17px;
     display: flex;

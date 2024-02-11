@@ -32,8 +32,6 @@ const SuperSort: React.FC<SuperSortPropsType> = (
 ) => {
     const up = '0' + value
     const down = '1' + value
-    // const up = value
-    // const down = value
     const onChangeCallback = () => {
         onChange(pureChange(sort, down, up))
     }
@@ -45,13 +43,11 @@ const SuperSort: React.FC<SuperSortPropsType> = (
     //         : noneIcon
     let icon = noneIcon
 
-    if (value === 'tech') {
-        if (sort === down) {
-            icon = downIcon
-        }
-        if (sort === up) {
-            icon = upIcon
-        }
+    if (sort === down) {
+        icon = downIcon
+    }
+    if (sort === up) {
+        icon = upIcon
     }
 
     // ? downIcon
