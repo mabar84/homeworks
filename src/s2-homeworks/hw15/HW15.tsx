@@ -63,22 +63,18 @@ const HW15 = () => {
         // setPage(
         setCount(newCount)
 
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        sendQuery({page: newPage, count: newCount, sort})
+        //setSearchParams()
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-        console.log(newSort)
         setSort(newSort)
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        // sendQuery(
-        // setSearchParams(
+        sendQuery({page, count, sort: newSort})
 
-        //
+        // setSearchParams(
     }
 
     useEffect(() => {
@@ -88,32 +84,32 @@ const HW15 = () => {
         setCount(+params.count || 4)
     }, [])
 
-    let sortedTechs = techs
-    if (sort === '0tech') {
-        sortedTechs = [...techs].sort((a, b) => {
-            if (a.tech > b.tech) {
-                return -1;
-            }
-            if (a.tech < b.tech) {
-                return 1;
-            }
-            return 0;
-        });
-    }
-    if (sort === '1tech') {
-        sortedTechs = [...techs].sort((a, b) => {
-            if (a.tech < b.tech) {
-                return -1;
-            }
-            if (a.tech > b.tech) {
-                return 1;
-            }
-            return 0;
-        });
-    }
+    // let sortedTechs = techs
+    // if (sort === '0tech') {
+    //     sortedTechs = [...techs].sort((a, b) => {
+    //         if (a.tech > b.tech) {
+    //             return -1;
+    //         }
+    //         if (a.tech < b.tech) {
+    //             return 1;
+    //         }
+    //         return 0;
+    //     });
+    // }
+    // if (sort === '1tech') {
+    //     sortedTechs = [...techs].sort((a, b) => {
+    //         if (a.tech < b.tech) {
+    //             return -1;
+    //         }
+    //         if (a.tech > b.tech) {
+    //             return 1;
+    //         }
+    //         return 0;
+    //     });
+    // }
 
 
-    const mappedTechs = sortedTechs.map(t => (
+    const mappedTechs = techs.map(t => (
         <div key={t.id} className={s.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
                 {t.tech}
@@ -134,7 +130,6 @@ const HW15 = () => {
                 {idLoading && <div id={'hw15-loading'} className={s.loading}>
                     <div className={s.spinner}></div>
                 </div>}
-
 
                 <SuperPagination
                     page={page}
