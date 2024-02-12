@@ -57,7 +57,6 @@ const HW15 = () => {
                 setLoading(false)
             })
     }
-
     const onChangePagination = (newPage: number, newCount: number) => {
         // setSearchParams((prevParams) => {
         //     prevParams.set('someName', '2')
