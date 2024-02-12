@@ -37,7 +37,6 @@ const getTechs = (params: ParamsType) => {
             alert(e.response?.data?.errorText || e.message)
         })
 }
-
 const HW15 = () => {
     const [sort, setSort] = useState('')
     const [page, setPage] = useState(1)
@@ -46,6 +45,7 @@ const HW15 = () => {
     const [totalCount, setTotalCount] = useState(100)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
+
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
@@ -59,14 +59,19 @@ const HW15 = () => {
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
+        // setSearchParams((prevParams) => {
+        //     prevParams.set('someName', '2')
+        //     return prevParams
+        // })
+        // console.log(searchParams.get('someName'))
         // делает студент
+        console.log('nu')
+
         setPage(newPage)
         // setPage(
-        setCount(newCount)
-        console.log('newCount', newCount)
-        console.log('newPage', newPage)
-        // sendQuery({page: newPage, count: newCount, sort})
-        sendQuery({page: newPage, count: 5, sort})
+        // setCount(newCount)
+        sendQuery({page: newPage, count, sort})
+        // sendQuery({page: newPage, count: 5, sort})
         // setSearchParams()
     }
 
@@ -75,7 +80,17 @@ const HW15 = () => {
         setSort(newSort)
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        sendQuery({page, count, sort: newSort})
+        sendQuery({page: 1, count, sort: newSort})
+
+        // setSearchParams(
+    }
+
+    const onChangeSelect = (itemsInTable: number) => {
+        // делает студент
+        // setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
+        setCount(itemsInTable)
+        sendQuery({page: 1, count: itemsInTable, sort})
 
         // setSearchParams(
     }
@@ -86,31 +101,6 @@ const HW15 = () => {
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
-
-    // let sortedTechs = techs
-    // if (sort === '0tech') {
-    //     sortedTechs = [...techs].sort((a, b) => {
-    //         if (a.tech > b.tech) {
-    //             return -1;
-    //         }
-    //         if (a.tech < b.tech) {
-    //             return 1;
-    //         }
-    //         return 0;
-    //     });
-    // }
-    // if (sort === '1tech') {
-    //     sortedTechs = [...techs].sort((a, b) => {
-    //         if (a.tech < b.tech) {
-    //             return -1;
-    //         }
-    //         if (a.tech > b.tech) {
-    //             return 1;
-    //         }
-    //         return 0;
-    //     });
-    // }
-
 
     const mappedTechs = techs.map(t => (
         <div key={t.id} className={s.row}>
@@ -139,7 +129,7 @@ const HW15 = () => {
                     itemsCountForPage={count}
                     totalCount={totalCount}
                     onChange={onChangePagination}
-                    // setCount={setCount}
+                    onChangeSelectCallback={onChangeSelect}
                 />
 
                 <div className={s.rowHeader}>
