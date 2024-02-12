@@ -2,6 +2,7 @@
     display: flex;
     margin-bottom: 36px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .pagination li button {
@@ -23,10 +24,24 @@
 
 }
 
-.text1 {
+select {
+    height: 24px;
+    margin-left: 10px;
+    margin-right: 6px;
+    border: 2px solid #ECEBEB;
+    border-radius: 2px;
+    color: #0D0B0C;
+    font-size: 14px;
+}
 
+.text1 {
+    color: #0D0B0C;
+    font-size: 14px;
 }
 
 .text2 {
+    color: #0D0B0C;
+    font-size: 14px;
+
 
 }

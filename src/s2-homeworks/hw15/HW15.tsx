@@ -58,40 +58,21 @@ const HW15 = () => {
             })
     }
     const onChangePagination = (newPage: number, newCount: number) => {
-        // setSearchParams((prevParams) => {
-        //     prevParams.set('someName', '2')
-        //     return prevParams
-        // })
-        // console.log(searchParams.get('someName'))
-        // делает студент
-        console.log('nu')
-
         setPage(newPage)
-        // setPage(
-        // setCount(newCount)
         sendQuery({page: newPage, count, sort})
-        // sendQuery({page: newPage, count: 5, sort})
         // setSearchParams()
     }
 
     const onChangeSort = (newSort: string) => {
-        // делает студент
         setSort(newSort)
         setPage(1) // при сортировке сбрасывать на 1 страницу
-
         sendQuery({page: 1, count, sort: newSort})
-
-        // setSearchParams(
     }
 
     const onChangeSelect = (itemsInTable: number) => {
-        // делает студент
-        // setSort(newSort)
         setPage(1) // при сортировке сбрасывать на 1 страницу
         setCount(itemsInTable)
         sendQuery({page: 1, count: itemsInTable, sort})
-
-        // setSearchParams(
     }
 
     useEffect(() => {
@@ -106,22 +87,22 @@ const HW15 = () => {
             <div id={'hw15-tech-' + t.id} className={s.tech}>
                 {t.tech}
             </div>
-
             <div id={'hw15-developer-' + t.id} className={s.developer}>
                 {t.developer}
             </div>
         </div>
     ))
+    const hwClassName = s2.hw + (idLoading ? ' ' + s.loading : '')
 
     return (
         <div id={'hw15'}>
             <div className={s2.hwTitle}>Homework #15</div>
 
-            <div className={s2.hw}>
+            <div className={hwClassName}>
                 {/*{idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}*/}
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>
-                    <div className={s.spinner}></div>
-                </div>}
+                {idLoading && <div className={s.spinner}></div>}
+
+                {idLoading && <div id={'hw15-loading'}></div>}
 
                 <SuperPagination
                     page={page}

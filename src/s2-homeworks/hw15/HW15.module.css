@@ -33,21 +33,21 @@
 }
 
 .loading {
-    background: yellow;
-    /*position: relative;*/
 
+
+    position: relative;
 }
 
-/*.loading:after {*/
-/*    content: '';*/
-/*    !*background: #343434;*!*/
-/*    opacity: 0.4;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*    top: 0;*/
-/*    position: absolute;*/
-/*}*/
+.loading:after {
+    content: '';
+    background: #343434;
+    opacity: 0.1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+}
 
 .loading .spinner {
     width: 90px;
@@ -55,15 +55,11 @@
     border-radius: 50%;
     border: 10px solid #FFFFFF00;
     border-top: 10px solid #512DE4;
-    border-top: 10px solid red;
     animation: spin 1.5s linear infinite;
-    opacity: 0.4;
-    left: 50%;
+    left: calc(50% - 45px);
     right: 0;
     bottom: 0;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    /*transform: translateX(-200px);*/
+    top: calc(50% - 45px);
     position: absolute;
 }
 
