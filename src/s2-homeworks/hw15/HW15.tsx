@@ -46,13 +46,14 @@ const HW15 = () => {
     const [totalCount, setTotalCount] = useState(100)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
-
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
                 //@ts-ignore
                 setTechs(res.data.techs)
+                //@ts-ignore
+                setTotalCount(res.data.totalCount)
                 setLoading(false)
             })
     }
@@ -62,9 +63,11 @@ const HW15 = () => {
         setPage(newPage)
         // setPage(
         setCount(newCount)
-
-        sendQuery({page: newPage, count: newCount, sort})
-        //setSearchParams()
+        console.log('newCount', newCount)
+        console.log('newPage', newPage)
+        // sendQuery({page: newPage, count: newCount, sort})
+        sendQuery({page: newPage, count: 5, sort})
+        // setSearchParams()
     }
 
     const onChangeSort = (newSort: string) => {
@@ -136,6 +139,7 @@ const HW15 = () => {
                     itemsCountForPage={count}
                     totalCount={totalCount}
                     onChange={onChangePagination}
+                    // setCount={setCount}
                 />
 
                 <div className={s.rowHeader}>
