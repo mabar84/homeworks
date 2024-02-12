@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/homeworks/static/css/main.425d7062.css",
-    "main.js": "/homeworks/static/js/main.ab033b6d.js",
+    "main.css": "/homeworks/static/css/main.064021b1.css",
+    "main.js": "/homeworks/static/js/main.801841e2.js",
     "static/js/787.66cb4309.chunk.js": "/homeworks/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/homeworks/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/200.svg": "/homeworks/static/media/200.96248f7df0dde10e0a82ac30418f50bc.svg",
@@ -14,12 +14,15 @@
     "static/media/checked.svg": "/homeworks/static/media/checked.b75ca55e8759862b4083.svg",
     "index.html": "/homeworks/index.html",
     "static/media/burger.svg": "/homeworks/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
-    "main.425d7062.css.map": "/homeworks/static/css/main.425d7062.css.map",
-    "main.ab033b6d.js.map": "/homeworks/static/js/main.ab033b6d.js.map",
+    "static/media/icon.svg": "/homeworks/static/media/icon.2b02a4c3d37e6483739f81c35de1e661.svg",
+    "static/media/down-black.svg": "/homeworks/static/media/down-black.67a4eed9783e32e71f22db4bcca5d27a.svg",
+    "static/media/up-black.svg": "/homeworks/static/media/up-black.f17c0eac5e3ca1ee9659968e187367ae.svg",
+    "main.064021b1.css.map": "/homeworks/static/css/main.064021b1.css.map",
+    "main.801841e2.js.map": "/homeworks/static/js/main.801841e2.js.map",
     "787.66cb4309.chunk.js.map": "/homeworks/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.425d7062.css",
-    "static/js/main.ab033b6d.js"
+    "static/css/main.064021b1.css",
+    "static/js/main.801841e2.js"
   ]
 }
