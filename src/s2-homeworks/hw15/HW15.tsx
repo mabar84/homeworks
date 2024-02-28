@@ -14,19 +14,16 @@ import SuperSort from './common/c10-SuperSort/SuperSort'
 * 4 - сделать стили в соответствии с дизайном
 * 5 - добавить HW15 в HW5/pages/JuniorPlus
 * */
-
 type TechType = {
     id: number
     tech: string
     developer: string
 }
-
 type ParamsType = {
     sort: string
     page: number
     count: number
 }
-
 const getTechs = (params: ParamsType) => {
     return axios
         .get<{ techs: TechType[], totalCount: number }>(
@@ -111,7 +108,6 @@ const HW15 = () => {
                     onChange={onChangePagination}
                     onChangeSelectCallback={onChangeSelect}
                 />
-
                 <div className={s.rowHeader}>
                     <div className={s.techHeader}>
                         tech
@@ -129,5 +125,4 @@ const HW15 = () => {
         </div>
     )
 }
-
 export default HW15

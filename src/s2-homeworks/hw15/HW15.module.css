@@ -33,15 +33,14 @@
 }
 
 .loading {
-
-
     position: relative;
+    filter: blur(1px);
 }
 
 .loading:after {
     content: '';
-    background: #343434;
-    opacity: 0.1;
+    background: white;
+    opacity: 0.7;
     left: 0;
     right: 0;
     bottom: 0;

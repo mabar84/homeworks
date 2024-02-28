@@ -35,18 +35,22 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 setLoading(false)
-                //@ts-ignore
-                setTechs(res.data.techs)
+                if (res) {
+                    setTechs(res.data.techs)
+                }
             })
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
+        console.log(value)
         setSearchParams(value)
     }
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
+        console.log('params', params)
+        console.log('searchParams', searchParams)
         sendQuery(params.find || '')
         setFind(params.find || '')
     }, [])
